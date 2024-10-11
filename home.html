@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - PATROASTEROIDS</title>
+    <link rel="stylesheet" href="homeStyle.css">
+</head>
+
+<body>
+    <header>
+        <div class="titulo">
+            <h1>PATROASTEROIDS</h1>
+            <p>Sua nave é a mais forte do mundo!</p>
+            <button class="profile-button" onclick="viewProfile()">Ver Meu Perfil</button>            
+            <button id="Logout" class="exit-button" onclick="redirectToLogin()">Sair</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="ranking">
+            <h2>Ranking</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Posição</th>
+                        <th>Nome</th>
+                        <th>Pontuação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Jogador 1</td>
+                        <td>1500</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jogador 2</td>
+                        <td>1300</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Jogador 3</td>
+                        <td>1200</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Jogador 4</td>
+                        <td>1100</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Jogador 5</td>
+                        <td>1000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <div class="stars"></div>
+    <div class="star"></div>
+
+</body>
+<script src="script.js"></script>
+</html>

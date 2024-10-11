@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - PATROASTEROIDS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div class="stars"></div>
+    <div class="star"></div>
+
+    <form class="conteiner">
+        <div class="card">
+            <h1> Registrar </h1>
+
+            <div id="msgSuccess"></div>
+            <div id="msgError"></div>
+
+            <div class="label-float">
+                <input type="text" name="nome" id="nome" onchange="onChangeNome()" placeholder="" required/>
+                <label for="nome">Nome</label>
+            </div> 
+            <div class="label-float">
+                <input type="text" name="usuario" id="usuario" onchange="onChangeUsuario()" placeholder="" required/>
+                <label for="usuario">Nome de usuario</label>
+            </div> 
+            <div class="label-float">
+                <input type="email" name="email" id="email" onchange="onChangeEmail()" placeholder="" required/>
+                <label for="email">Email</label>
+                <div class="erro" id="email-obrigatorio-erro">O Email é obrigatório</div>
+                <div class="erro" id="email-invalido-erro">O Email é inválido</div>
+            </div> 
+            <div class="label-float">
+                <input type="password" name="password" id="senha" onchange="onChangePassword()" placeholder="" required/>
+                <label for="password">Senha</label>
+                <div class="erro" id="senha-obrigatoria-erro">A senha é obrigatória</div>
+
+            </div>
+            <div class="label-float">
+                <input type="password" name="confirmpassword" id="confirmpassword" onchange="onChangeConfirmPassword()" placeholder="" required/>
+                <label for="confirmpassword">Confirmar senha</label>
+            </div>
+            <div class="erro" id="confirm-password-erro" style="display: none;">As senhas não coincidem</div> <!-- Mensagem de erro -->
+            <div>
+                <button type="button" class="registrar" id="registrar" onclick="register()" disabled="true">Registrar-se</button>
+            </div>
+            <div class="line">
+                <hr>
+            </div>
+            <button id="Logout" class="exit-button" onclick="redirectToLogin()">Voltar</button>
+
+        </div>
+    </form>
+</body>
+
+<script src="register.js"></script>
+
+</html>

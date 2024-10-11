@@ -1,0 +1,346 @@
+/* Estilo do corpo com fundo estrelado */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #001d3d; /* Cor do céu noturno */
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Estrelas no fundo */
+.stars {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: transparent;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: twinkle 2s infinite alternate, moveStar 10s linear infinite;
+}
+
+/* Animação de piscar das estrelas */
+@keyframes twinkle {
+    0% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0.3;
+    }
+}
+
+/* Animação de movimento das estrelas */
+@keyframes moveStar {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-500px, 500px); /* As estrelas vão se mover diagonalmente */
+    }
+}
+
+/* Estilo do formulário de login */
+.conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Para garantir que o formulário fique acima das estrelas */
+}
+
+.card {
+    background-color: #ffffff40;
+    padding: 30px;
+    border-radius: 10%;
+    box-shadow: 3px 3px 1px 0px #00000080;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Outros estilos do formulário */
+.erro {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+form {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(238, 255, 0);
+}
+
+.label-float input {
+    width: 100%;
+    padding: 5px 5px;
+    display: inline;
+    border: 0;
+    border-bottom: 2px solid #000;
+    background-color: transparent;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all 0.1s ease-out;
+    border-radius: 0;
+}
+
+.label-float {
+    position: relative;
+    padding-top: 15px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.label-float input:focus {
+    border-bottom: 2px solid #1ac03e;
+}
+
+.label-float label {
+    color: #000;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 15px;
+    transition: all 0.1s ease-out;
+}
+
+.label-float input:focus + label,
+.label-float input:valid + label {
+    font-size: 15px;
+    margin-top: 0;
+    color: #1ac03e;
+}
+
+.erro {
+    color: rgb(224, 45, 45);
+    display: none;
+    margin-bottom: 10px;
+}
+
+.login:enabled:hover {
+    background-color: #ffffff;
+    color: #000;
+    cursor: pointer;
+}
+.registrar:enabled:hover {
+    background-color: #ffffff;
+    color: #000;
+    cursor: pointer;
+}
+
+.login {
+    width: 100px;
+    height: 40px;
+    max-width: 200px; 
+    background-color: transparent;
+    border-color: white;
+    padding: 7px;
+    margin-top: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 12pt;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease-out;
+}
+
+.registrar{
+    width: auto;
+    height: 50px;
+    background-color: transparent;
+    border-color: white;
+    padding: 7px;
+    margin-top: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 12pt;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease-out;
+}
+
+button:disabled {
+    opacity: 0.5;
+}
+
+hr{
+    width: 200px;
+    margin: 15px;
+}
+
+a{
+    margin-top: 10px;
+    color: rgb(39, 166, 250);
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13pt;
+    transition: all .1s ease-out;
+}
+
+.register a:hover{
+    color: rgb(167, 43, 43);
+}
+
+.register label{
+    color: #000;
+    font-weight: bold;
+    font-size: 13pt;
+}
+
+#msgError{
+    text-align: center;
+    color: #ff0000;
+    background-color: #ffbbbb;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    display: none;
+}
+#msgSuccess{
+    text-align: center;
+    color: #00bb00;
+    background-color: #bbffbe;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    display: none;
+}
+
+#login-error{
+    display: none; 
+    color: red;
+}
+
+.profile-container {
+    text-align: center;
+    margin-top: 50px;
+}
+.profile-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profile-info {
+    margin-top: 20px;
+}
+.profile-container input {
+    margin-top: 10px;
+}
+
+/* Estilização geral da página de perfil */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    height: 100vh;
+}
+
+/* Estilo da imagem de perfil */
+/* Mantém a imagem de perfil estilizada */
+#profilePic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #4caf50; /* Borda verde */
+    cursor: pointer; /* Indica que a imagem é clicável */
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de hover para a imagem de perfil */
+#profilePic:hover {
+    transform: scale(1.05);
+}
+
+
+/* Informações do perfil */
+.profile-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#nomeUsuario {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+#usuarioNome {
+    font-size: 18px;
+    color: #777;
+}
+
+/* Estilo do input file */
+#newProfilePic {
+    display: none;
+}
+
+/* Estilo do botão de atualizar foto */
+#updateProfilePic {
+    background-color: #4caf50; /* Cor verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efeito de hover no botão */
+#updateProfilePic:hover {
+    background-color: #45a049; /* Verde mais escuro */
+    transform: scale(1.05);
+}
+
+/* Efeito de clique no botão */
+#updateProfilePic:active {
+    background-color: #3e8e41;
+    transform: scale(0.98);
+}
+
+.exit-button {
+    cursor: pointer; /* Mostra que é clicável */
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #FFDD44;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.exit-button:hover{
+    cursor: pointer;
+    background-color: #FFC107;
+}

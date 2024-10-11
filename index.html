@@ -1,47 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login - PATROASTEROIDS</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="stars"></div>
     <div class="star"></div>
 
     <form class="conteiner">
-        <div class="card">
-            <h1> Login </h1>
-            <div id="login-error">Usuário ou senha incorretos</div>
-            <div class="label-float">
-                <input type="email" name="email" id="email" onchange="onChangeEmail()" placeholder="" required/>
-                <label id="emailLabel" for="email">Email</label> 
-                <div class="erro" id="email-obrigatorio-erro">O Email é obrigatório</div>
-                <div class="erro" id="email-invalido-erro">O Email é inválido</div>
-            </div> 
-            <div class="label-float">
-                <input type="password" name="password" id="password" onchange="onChangePassword()" placeholder="" required/>
-                <label id="passwordLabel" for="password">Senha</label>
-                <div class="erro" id="senha-obrigatoria-erro">A senha é obrigatória</div>
-            </div>
-            <div>
-                <button type="button" class="login" id="login" disabled="true" onclick="loginUser()">Entrar</button>
-            </div>
-            <div class="line">
-                <hr>
-            </div>
-
-            <div class="register">
-                <label> Nao tem uma conta?</label>
-                <a id="register" onclick="registerUser()">Registre-se</a>
-            </div>
+      <div class="card">
+        <h1>Login</h1>
+        <div id="login-error">Usuário ou senha incorretos</div>
+        <div class="label-float">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            onchange="onChangeEmail()"
+            placeholder=""
+            required
+          />
+          <label id="emailLabel" for="email">Email</label>
+          <div class="erro" id="email-obrigatorio-erro">
+            O Email é obrigatório
+          </div>
+          <div class="erro" id="email-invalido-erro">O Email é inválido</div>
         </div>
+        <div class="label-float">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            onchange="onChangePassword()"
+            placeholder=""
+            required
+          />
+          <label id="passwordLabel" for="password">Senha</label>
+          <div class="erro" id="senha-obrigatoria-erro">
+            A senha é obrigatória
+          </div>
+        </div>
+        <div>
+          <button
+            type="button"
+            class="login"
+            id="login"
+            disabled="true"
+            onclick="loginUser()"
+          >
+            Entrar
+          </button>
+        </div>
+        <div class="line">
+          <hr />
+        </div>
+
+        <div class="register">
+          <label> Nao tem uma conta?</label>
+          <a id="register" onclick="registerUser()">Registre-se</a>
+        </div>
+      </div>
     </form>
-</body>
+  </body>
 
-<script src="script.js"></script>
-
+  <script src="assets/js/script.js"></script>
 </html>
